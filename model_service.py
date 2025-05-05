@@ -2,26 +2,26 @@ import os
 from flask import Flask, jsonify, request
 from flasgger import Swagger
 import joblib
-# ! TODO: Uncomment the following line to support text preprocessing
-# from lib_ml.preprocessing import preprocess_text
+# ! TODO: Add dependency for libml
+from libml.preprocessing import build_pipeline
 from lib_version.version_util import VersionUtil
 
 app = Flask(__name__)
 Swagger(app)
 
 MODEL_PATH = os.getenv("MODEL_PATH", "model.pkl")
+# MODEL_URL = 'https://github.com/remla2025-team16/model-training/releases/download/v1.0.0/sentiment-model.pkl'
 MODEL_URL  = os.getenv("MODEL_URL", None)
 
 # ! TODO: Uncomment the following lines to support downloading the model
-# if MODEL_URL and not os.path.isfile(MODEL_PATH):
-#     import requests
-#     resp = requests.get(MODEL_URL)
-#     resp.raise_for_status()
-#     with open(MODEL_PATH, "wb") as f:
-#         f.write(resp.content)
-# model = joblib.load(MODEL_PATH)
+if MODEL_URL and not os.path.isfile(MODEL_PATH):
+    import requests
+    resp = requests.get(MODEL_URL)
+    resp.raise_for_status()
+    with open(MODEL_PATH, "wb") as f:
+        f.write(resp.content)
+pipeline = joblib.load(MODEL_PATH)
 
-model = None
 SERVICE_VERSION = VersionUtil().get_version()
 
 @app.route("/api/model", methods=["POST"])
@@ -55,13 +55,12 @@ def predict():
               description: Predicted sentiment label
               example: 1
     """
-    # ! TODO: Uncomment and implement the following lines to support prediction
-    return jsonify({"sentiment": 0})
-    # data = request.get_json(force=True)
-    # text = data.get("text", "")
+    data = request.get_json(force=True)
+    text = data.get("text", "")
+    predictions = pipeline.predict([text])[0]
     # features = preprocess_text(text)
     # pred = model.predict([features])[0]
-    # return jsonify({"sentiment": int(pred)})
+    return jsonify({"sentiment": int(predictions)})
 
 @app.route("/api/version", methods=["GET"])
 def version():
