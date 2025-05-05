@@ -3,4 +3,4 @@ joblib>=1.1.0
 requests>=2.25.0
 flasgger>=0.9.5
 lib-version @ git+https://github.com/remla2025-team16/lib-version.git@v1.0.0
-# lib-ml
+libml @ git+https://github.com/remla2025-team16/lib-ml.git@v1.0.0
