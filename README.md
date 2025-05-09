@@ -1,6 +1,6 @@
 # model-service
 
-A lightweight Flask-based REST API that wraps a pretrained sentiment analysis model. It exposes prediction and version endpoints, uses `lib-ml` for preprocessing, and is packaged as a container for easy deployment.
+A lightweight Flask-based REST API that wraps a pretrained sentiment analysis model. It exposes prediction and version endpoints, uses `lib-ml` for preprocessing, and is packaged as a container for easy deployment. The personal contribution can be seen from `ACTIVITY.md`.  
 
 ---
 
