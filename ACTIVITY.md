@@ -1,5 +1,7 @@
-- Commit by **Sloppyan** at **2025-05-05T19:03:23Z**: [d3f74da](https://github.com/remla2025-team16/app/commit/d3f74dac1147ceb009fc635f3e785fb784815c4a): chore: add .gitignore
-- Commit by **Sloppyan** at **2025-05-05T19:03:23Z**: [0428d62](https://github.com/remla2025-team16/app/commit/0428d62d397393abd0df79f85c59f1363b213c81): fix: update requirements.txt
-- Commit by **Sloppyan** at **2025-05-05T19:03:23Z**: [eaf9bea](https://github.com/remla2025-team16/app/commit/eaf9bea60c894535c40baf4f20f8493fd6ce0062): fix: add model interaction
-- Commit by **Sloppyan** at **2025-05-05T12:16:42Z**: [e51cf7d](https://github.com/remla2025-team16/app/commit/e51cf7db4ca525cc40cec1893786c780fd88b1b6): Initial commit
+- Commit by **Anyan Huang** at **2025-05-09T08:58:40Z**: [8aae1a4](https://github.com/remla2025-team16/app/commit/8aae1a4f46a481b1ef79a0b409a4fb4195ad5fc2): chore: add ACTIVITY.md
+- Commit by **Anyan Huang** at **2025-05-09T08:58:40Z**: [ef50423](https://github.com/remla2025-team16/app/commit/ef50423f7ee55631fc2061aa26c7fd00a475da36): chore: update README
+- Commit by **Anyan Huang** at **2025-05-05T19:03:23Z**: [d3f74da](https://github.com/remla2025-team16/app/commit/d3f74dac1147ceb009fc635f3e785fb784815c4a): chore: add .gitignore
+- Commit by **Anyan Huang** at **2025-05-05T19:03:23Z**: [0428d62](https://github.com/remla2025-team16/app/commit/0428d62d397393abd0df79f85c59f1363b213c81): fix: update requirements.txt
+- Commit by **Anyan Huang** at **2025-05-05T19:03:23Z**: [eaf9bea](https://github.com/remla2025-team16/app/commit/eaf9bea60c894535c40baf4f20f8493fd6ce0062): fix: add model interaction
+- Commit by **Anyan Huang** at **2025-05-05T12:16:42Z**: [e51cf7d](https://github.com/remla2025-team16/app/commit/e51cf7db4ca525cc40cec1893786c780fd88b1b6): Initial commit
 - Commit by **Sloppyan** at **2025-05-02T21:04:19Z**: [a144d2f](https://github.com/remla2025-team16/app/commit/a144d2fe040de244eb9b74f19a7e827a6d613aa9): Create model-service.yml
