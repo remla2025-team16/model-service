@@ -48,5 +48,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ steps.tag.outputs.TAG }}
-            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}/model-service:${{ steps.tag.outputs.TAG }}
+            ghcr.io/${{ github.repository }}/model-service:latest
