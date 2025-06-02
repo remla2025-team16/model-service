@@ -1,6 +1,7 @@
 import os
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Response
 from flasgger import Swagger
+from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 import joblib
 # ! TODO: Add dependency for libml
 from libml.preprocessing import build_pipeline
@@ -81,6 +82,10 @@ def version():
               example: "v0.1.0"
     """
     return jsonify({"model_version": SERVICE_VERSION})
+
+@app.route("/api/metrics")
+def metrics():
+    return Response(generate_latest(), mimetype=CONTENT_TYPE_LATEST)
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5010))
