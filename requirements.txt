@@ -4,3 +4,4 @@ requests>=2.25.0
 flasgger>=0.9.5
 lib-version @ git+https://github.com/remla2025-team16/lib-version.git@v1.0.0
 libml @ git+https://github.com/remla2025-team16/lib-ml.git@v1.0.0
+prometheus_client
