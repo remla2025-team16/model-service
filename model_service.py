@@ -83,7 +83,7 @@ def version():
     """
     return jsonify({"model_version": SERVICE_VERSION})
 
-@app.route("/api/metrics")
+@app.route("/metrics")
 def metrics():
     return Response(generate_latest(), mimetype=CONTENT_TYPE_LATEST)
 
