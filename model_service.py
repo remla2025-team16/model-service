@@ -3,8 +3,7 @@ from flask import Flask, jsonify, request, Response
 from flasgger import Swagger
 from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 import joblib
-# ! TODO: Add dependency for libml
-from libml.preprocessing import build_pipeline
+from libml.preprocessing import clean_text
 from lib_version.version_util import VersionUtil
 
 app = Flask(__name__)
@@ -58,6 +57,9 @@ def predict():
     """
     data = request.get_json(force=True)
     text = data.get("text", "")
+    print("Received text:", text)
+    text = clean_text(text)  # Clean the input text
+    print("cleaned text:", text)
     predictions = pipeline.predict([text])[0]
     # features = preprocess_text(text)
     # pred = model.predict([features])[0]
